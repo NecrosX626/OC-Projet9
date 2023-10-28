@@ -3,7 +3,24 @@ const galleryWrapper = document.querySelector(".galleryWrapper");
 const tagsList = [];
 
 const itemsList = document.querySelectorAll(".galleryRwk-item")
+
+function handlePreview(image) {
+  image.addEventListener("click", function () {
+    const modalContainer = document.createElement("div")
+    modalContainer.className = "modal-wrapper"
+    galleryWrapper.appendChild(modalContainer)
+    modalContainer.addEventListener("click", function() {
+      modalContainer.remove()
+    })
+    const modalContent = document.createElement("img")
+    modalContent.className = "modal-content"
+    modalContent.setAttribute("src", image.src)
+    modalContainer.appendChild(modalContent)
+  })
+}
+
 Array.from(itemsList).forEach(item => {
+    handlePreview(item)
     if (!tagsList.includes(item.dataset.tag)){
         tagsList.push(item.dataset.tag)
     }
