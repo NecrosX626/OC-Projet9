@@ -393,6 +393,9 @@ input[type="submit"] {
 	padding: 0.5em 1em;
 	cursor: pointer;
 }
-.filter.active {
+.activeFilter {
 	background-color: #BEB45A;
+}
+.hidden{
+	display: none;
 }
