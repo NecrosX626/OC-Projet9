@@ -1,4 +1,22 @@
-//FILTERS GENERATIONS
+//SLIDER
+
+// const slideList = document.querySelectorAll(".carousel-item")
+// const slideIndicators = document.querySelectorAll(".carousel-indicator")
+
+// function setIndicators () {
+//   const indicatorContainer = document.createElement("div")
+//   indicatorContainer.classList.add("carousel-indicatorsList")
+//   for (let i = 0; i < slideList.length; i++) {
+//     const newIndicator = document.createElement("button")
+//     newIndicator.classList.add("carousel-indicator")
+//     newIndicator.setAttribute("dataset-indicator", i)
+//     newIndicator.addEventListener("click", slideTo(i))
+//     indicatorContainer.appendChild(newIndicator)
+//   }
+// }
+
+
+//GALLERY
 const galleryWrapper = document.querySelector(".galleryWrapper");
 const tagsList = [];
 

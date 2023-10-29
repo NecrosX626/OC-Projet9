@@ -11,14 +11,14 @@
       rel="stylesheet"
     />
     <meta charset="UTF-8" />
-    <!-- <script src="./assets/bootstrap/bootstrap.bundle.js"></script> -->
-    <script
+    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+    <!-- <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
-    ></script>
+    ></script> 
     <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
+    <script src="./assets/scripts.js"></script> -->
   </head>
   <body>
     <div class="top-header">
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div id="header">
-      <div
+      <!-- <div
         id="carouselExampleIndicators"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -109,11 +109,82 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div> -->
+      <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="carousel-indicator active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+          class="carousel-indicator"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+          class="carousel-indicator"
+        ></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./assets/images/slider/ryoji-iwata-buisness.webp"
+            class="d-block w-100"
+            alt="slide buisnessman"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/images/slider/nicholas-green-concert.webp"
+            class="d-block w-100"
+            alt="slide concert"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/images/slider/edward-cisneros-wedding.webp"
+            class="d-block w-100"
+            alt="slide wedding"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
     </div>
     <div id="about">
       <div class="picture left">
-        <img src="./assets/images/nina.webp" />
+        <img src="./assets/images/nina.webp" alt="profile"/>
       </div>
       <div id="about-me">
         <h3 class="about-me__title">A propos de moi</h3>
