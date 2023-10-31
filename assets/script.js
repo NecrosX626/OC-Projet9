@@ -1,27 +1,17 @@
-//SLIDER
-
-// const slideList = document.querySelectorAll(".carousel-item")
-// const slideIndicators = document.querySelectorAll(".carousel-indicator")
-
-// function setIndicators () {
-//   const indicatorContainer = document.createElement("div")
-//   indicatorContainer.classList.add("carousel-indicatorsList")
-//   for (let i = 0; i < slideList.length; i++) {
-//     const newIndicator = document.createElement("button")
-//     newIndicator.classList.add("carousel-indicator")
-//     newIndicator.setAttribute("dataset-indicator", i)
-//     newIndicator.addEventListener("click", slideTo(i))
-//     indicatorContainer.appendChild(newIndicator)
-//   }
-// }
-
-
 //GALLERY
 const galleryWrapper = document.querySelector(".galleryWrapper");
+const itemsList = document.querySelectorAll(".gallery-item")
+
+//Génération de la liste de Tags
 const tagsList = [];
+Array.from(itemsList).forEach(item => {
+  handlePreview(item)
+  if (!tagsList.includes(item.dataset.tag)){
+      tagsList.push(item.dataset.tag)
+  }
+})
 
-const itemsList = document.querySelectorAll(".galleryRwk-item")
-
+//Création de la Modale de Preview
 function handlePreview(image) {
   image.addEventListener("click", function () {
     const modalContainer = document.createElement("div")
@@ -36,14 +26,7 @@ function handlePreview(image) {
     modalContainer.appendChild(modalContent)
   })
 }
-
-Array.from(itemsList).forEach(item => {
-    handlePreview(item)
-    if (!tagsList.includes(item.dataset.tag)){
-        tagsList.push(item.dataset.tag)
-    }
-})
-
+//Filtrage de la Galerie
 const handleFilter = (filter) => {
   filter.addEventListener("click", function() {
     const oldTag = document.querySelector(".activeFilter")
@@ -66,6 +49,7 @@ const handleFilter = (filter) => {
   })
 }
 
+//Création de la Liste de Filtres
 const generateFiltersList = () => {
   const tagsUl = document.createElement("ul");
   tagsUl.className = "filters-list"
