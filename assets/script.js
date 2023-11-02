@@ -33,6 +33,9 @@ const handleFilter = (filter) => {
     oldTag.classList.remove("activeFilter")
     filter.classList.add("activeFilter")
     const filteredItems = document.querySelectorAll(`[data-tag="${filter.innerText}"]`)
+    itemsList.forEach((item) => {
+      item.classList.add("hidden")
+    })
     if (filter.innerText != "Tous"){
       itemsList.forEach((item) => {
         item.classList.add("hidden")
