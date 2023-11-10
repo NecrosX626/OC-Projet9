@@ -145,9 +145,12 @@ body {
 	padding: 0.5em 1em;
 	cursor: pointer;
 }
+.filter a { 
+	color: inherit;
+	text-decoration: none;
+}
 .activeFilter {
 	background-color: #BEB45A;
-	color: white;
 }
 .modal-wrapper {
 	position: fixed;

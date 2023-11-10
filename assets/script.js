@@ -10,7 +10,6 @@ Array.from(itemsList).forEach(item => {
       tagsList.push(item.dataset.tag)
   }
 })
-
 //Création de la Modale de Preview
 function handlePreview(image) {
   image.addEventListener("click", function () {
@@ -51,20 +50,31 @@ const handleFilter = (filter) => {
     }
   })
 }
-
 //Création de la Liste de Filtres
 const generateFiltersList = () => {
   const tagsUl = document.createElement("ul");
   tagsUl.className = "filters-list"
   const tagsAll = document.createElement("li")
+  const linkAll = document.createElement("a");
+  linkAll.addEventListener("click", (e) => {
+    e.preventDefault()
+  })
+  linkAll.href = "#"
+  tagsAll.appendChild(linkAll)
   tagsAll.className = "filter activeFilter"
-  tagsAll.innerText = "Tous"
+  linkAll.innerText = "Tous"
   tagsUl.appendChild(tagsAll)
   handleFilter(tagsAll)
   tagsList.forEach((tags) => {
     const newTag = document.createElement("li");
+    const newLink = document.createElement("a");
+    newLink.addEventListener("click", (e) => {
+      e.preventDefault()
+    })
+    newLink.href = "#"
+    newTag.appendChild(newLink)
     newTag.className = "filter";
-    newTag.innerText = tags;
+    newLink.innerText = tags;
     tagsUl.appendChild(newTag);
     handleFilter(newTag)
   });
